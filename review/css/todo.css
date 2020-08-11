@@ -7,21 +7,6 @@
   display: flex;
   justify-content: center;
 }
-.js-todoform input:focus {
-  outline: 0;
-  color: white;
-}
-
-.js-todoform input {
-  border: 0;
-  background: none;
-  border-bottom: 2px solid white;
-  font-size: 25px;
-}
-
-.js-todoform input::placeholder {
-  color: white;
-}
 
 .js-todolist button {
   margin-right: 10px;
