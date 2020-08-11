@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1 class="js-clock">00:00:00</h1>
+    <!-- 시계 -->
+    <div class="js-clock">
+      <h1>00:00:00</h1>
+    </div>
+    <!-- 이름 묻기 -->
+    <form class="js-nameform">
+      <input type="text" placeholder="너의 이름은?" />
+    </form>
+    <!-- 인삿말 -->
+    <h4 class="js-greeting"></h4>
+
+    <!-- Todo List 추가 -->
+    <div class="todoAll">
+      <form class="js-todoform">
+        <input type="text" placeholder="너의 할일은?" />
+      </form>
+      <ul class="js-todolist"></ul>
+    </div>
 
     <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
   </body>
 </html>
