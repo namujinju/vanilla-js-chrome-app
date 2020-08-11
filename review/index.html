@@ -3,31 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Namujinju's Momentum</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Namujinju's Momentrum</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- 시계 -->
-    <div class="js-clock">
-      <h1>00:00:00</h1>
-    </div>
-    <!-- 이름 묻기 -->
-    <form class="js-nameform">
-      <input type="text" placeholder="너의 이름은?" />
-    </form>
-    <!-- 인삿말 -->
-    <h4 class="js-greeting"></h4>
-
-    <!-- Todo List 추가 -->
-    <div class="todoAll">
-      <form class="js-todoform">
-        <input type="text" placeholder="너의 할일은?" />
+    <main>
+      <div class="js-clock">
+        <h1>00:00:00</h1>
+      </div>
+      <!-- 이름 묻기 -->
+      <form class="js-nameform">
+        <input type="text" placeholder="너의 이름은?" />
       </form>
-      <ul class="js-todolist"></ul>
-    </div>
+      <!-- 인삿말 -->
+      <h3 class="js-greeting"></h3>
+
+      <!-- Todo List 추가 -->
+      <div class="toDoAll">
+        <form class="js-todoform">
+          <input type="text" placeholder="너의 할일은?" />
+        </form>
+        <ul class="js-todolist"></ul>
+      </div>
+      <div class="didAll"></div>
+    </main>
 
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
+    <script src="backgd.js"></script>
   </body>
 </html>

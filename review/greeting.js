@@ -2,7 +2,7 @@
 const nameForm = document.querySelector(".js-nameform"),
   nameInput = nameForm.querySelector("input"),
   greeting = document.querySelector(".js-greeting"),
-  toDoAll = document.querySelector(".todoAll");
+  toDoAll = document.querySelector(".toDoAll");
 
 // 태그를 보여주거나 감출 때 추가하는 class 이름
 const SHOWING_CN = "showing",
