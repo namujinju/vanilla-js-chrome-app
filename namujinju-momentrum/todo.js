@@ -3,8 +3,30 @@ const toDoForm = document.querySelector(".js-todoform"),
   toDoList = document.querySelector(".js-todolist");
 
 const TODO_LS = "toDos";
+const TODID_LS = "toDids";
 
 let toDos = [];
+
+function saveToDo() {
+  localStorage.setItem(TODO_LS, JSON.stringify(toDos));
+}
+
+function checkToDo(event) {
+  const checkBtn = event.target,
+    checkli = checkBtn.parentNode;
+  toDoList.removeChild(checkli);
+  const checkToDo = toDos.filter(function (todo) {
+    return todo.id === parseInt(checkli.id);
+  });
+
+  paintDid(checkToDo[0].text);
+  toDos = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(checkli.id);
+  });
+  saveToDo();
+
+  // localStorage.setItem(DID_LS, JSON.stringify(checkToDo));
+}
 
 function deleteToDo(event) {
   const btn = event.target,
@@ -19,21 +41,22 @@ function deleteToDo(event) {
   saveToDo(); // Local Storage에 제거한 값을 저장
 }
 
-function saveToDo() {
-  localStorage.setItem(TODO_LS, JSON.stringify(toDos));
-}
-
 function paintTodo(text) {
   // html 태그 (to do list tag) 만들기
   const li = document.createElement("li"),
     delBtn = document.createElement("button"),
-    span = document.createElement("span");
+    span = document.createElement("span"),
+    checkBtn = document.createElement("button");
   const newID = toDos.length + 1;
 
   span.innerText = text;
   delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteToDo);
+  checkBtn.innerText = "✔️";
+  checkBtn.addEventListener("click", checkToDo);
+
   li.appendChild(delBtn);
+  li.appendChild(checkBtn);
   li.appendChild(span);
   li.id = newID;
   toDoList.appendChild(li);

@@ -2,7 +2,7 @@
 const nameForm = document.querySelector(".js-nameform"),
   nameInput = nameForm.querySelector("input"),
   greeting = document.querySelector(".js-greeting"),
-  toDoAll = document.querySelector(".toDoAll");
+  greeting_main = document.querySelector("main");
 
 // 태그를 보여주거나 감출 때 추가하는 class 이름
 const SHOWING_CN = "showing",
@@ -26,7 +26,7 @@ function submitName(event) {
   nameValue = nameInput.value;
   paintGreeting(nameValue);
   saveName(nameValue);
-  toDoAll.classList.remove(HIDING_CN);
+  greeting_main.classList.remove(HIDING_CN);
 }
 
 function askForName() {
@@ -38,8 +38,7 @@ function loadName() {
   const currentUser = localStorage.getItem(NAME_LS);
 
   if (currentUser === null) {
-    toDoAll.classList.add(HIDING_CN);
-    console.log(toDoAll);
+    greeting_main.classList.add(HIDING_CN);
     askForName();
   } else {
     paintGreeting(currentUser);

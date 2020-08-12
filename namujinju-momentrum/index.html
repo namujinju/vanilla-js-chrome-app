@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- 시계 -->
-    <main>
+    <header>
+      <!-- 시계 -->
       <div class="js-clock">
         <h1>00:00:00</h1>
       </div>
@@ -18,20 +18,32 @@
       </form>
       <!-- 인삿말 -->
       <h3 class="js-greeting"></h3>
+      <button class="change-direction">방향 바꾸기</button>
+    </header>
 
+    <main>
       <!-- Todo List 추가 -->
-      <div class="toDoAll">
+      <div class="todo-did todo-section">
         <form class="js-todoform">
-          <input type="text" placeholder="너의 할일은?" />
+          <input type="text" placeholder="너의 할 일은?" required />
         </form>
-        <ul class="js-todolist"></ul>
+        <ul class="todo-did__list js-todolist"></ul>
       </div>
-      <div class="didAll"></div>
+      <!-- Did List 추가 -->
+
+      <div class="todo-did did-section">
+        <form class="js-didform">
+          <input type="text" placeholder="너의 한 일은?" required />
+        </form>
+        <ul class="todo-did__list js-didlist"></ul>
+      </div>
     </main>
 
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
+    <script src="did.js"></script>
     <script src="backgd.js"></script>
+    <script src="change.js"></script>
   </body>
 </html>

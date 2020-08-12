@@ -1,10 +1,12 @@
-@import "todo.css";
+@import "dodid.css";
 @import "main.css";
+@import "header.css";
 
 /* 리스트 앞에 기호 없애기 */
 ol,
 ul {
   list-style: none;
+  padding-left: 5px;
 }
 
 .showing {
