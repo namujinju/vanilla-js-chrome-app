@@ -5,10 +5,20 @@ header {
   align-items: center;
 }
 
-header .change-direction {
+.header-button {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 150px;
+}
+.header-button button {
+  margin: 0 5px;
+}
+
+header .change-name {
+  cursor: pointer;
+}
+
+header .change-direction {
   cursor: pointer;
 }
 

@@ -2,6 +2,7 @@ const didForm = document.querySelector(".js-didform"),
   didInput = didForm.querySelector("input"),
   didList = document.querySelector(".js-didlist");
 
+
 const DID_LS = "dids";
 
 let dids = [];

@@ -33,6 +33,7 @@ input::placeholder {
 
 .todo-did__list__vertical {
   height: 210px;
+  width: 1000px;
 }
 
 .todo-did button {
