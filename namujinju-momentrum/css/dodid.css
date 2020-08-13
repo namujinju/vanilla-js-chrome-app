@@ -43,3 +43,7 @@ input::placeholder {
   border: 0;
   cursor: pointer;
 }
+
+.todo-did button:active {
+  outline: 0;
+}
